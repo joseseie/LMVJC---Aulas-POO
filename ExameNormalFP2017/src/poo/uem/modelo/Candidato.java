@@ -1,6 +1,7 @@
 
 package poo.uem.modelo;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -8,7 +9,7 @@ import java.util.Date;
  * @author José Seie
  */
 
-public class Candidato {
+public class Candidato implements Serializable{
     
     private int numeroDoCandidato;
     private String nome;
