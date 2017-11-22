@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 package poo.uem.visao;
 
@@ -134,17 +129,12 @@ public class ExemploCadastro extends javax.swing.JFrame {
         pessoa.setEmail( tfEmail.getText() );
         
         
-        
-        JOptionPane.showMessageDialog(rootPane, pessoa.toString());
-
-        /*Gravar*/
+        /*Gravando no ficheiro de Objecto*/
         
          try {
             
-            
             // Criei um ficheiro
             FileOutputStream primeiroFicheiro = new FileOutputStream("D:\\Arquivos\\Ficheiros\\nomeFic.dat");
-            
             
             
             // Operacao (ObjectOutputStream gravar os dados no ficheiro)
@@ -160,29 +150,18 @@ public class ExemploCadastro extends javax.swing.JFrame {
             operacaoGravar.flush();
             
 
-            operacaoGravar.close();
-
-            
-            
+            operacaoGravar.close();   
             
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
+         
+         tfNome1.setText(null);
+         tfIdade.setText(null);
+         tfEmail.setText(null);
+         
+         JOptionPane.showMessageDialog(rootPane, "Salvocom sucesso!!!");
         
-        
-        
-        
-        
-        
-        
-        // Objecto
-        
-        // Gravar o Objecto no ficheiro de objectos
-        
-        
-
-
-
     }//GEN-LAST:event_btnSalvarActionPerformed
 
     /**
