@@ -32,6 +32,7 @@ public class TelaCandidato extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
@@ -41,32 +42,39 @@ public class TelaCandidato extends javax.swing.JFrame {
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
         jLabel5 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        jComboBox1 = new javax.swing.JComboBox<String>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new java.awt.GridLayout());
+        getContentPane().setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel1.setText("Cadastro do Funcionario");
+        jLabel1.setText("Cadastro do Candidato");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(157, 157, 157)
+                .addGap(187, 187, 187)
                 .addComponent(jLabel1)
-                .addContainerGap(159, Short.MAX_VALUE))
+                .addContainerGap(253, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(37, 37, 37)
+                .addGap(39, 39, 39)
                 .addComponent(jLabel1)
-                .addContainerGap(52, Short.MAX_VALUE))
+                .addContainerGap(50, Short.MAX_VALUE))
         );
 
         jButton1.setText("Gravar");
+
+        jButton2.setText("Voltar -> Menu");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -74,6 +82,8 @@ public class TelaCandidato extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton2)
+                .addGap(86, 86, 86)
                 .addComponent(jButton1)
                 .addGap(38, 38, 38))
         );
@@ -81,7 +91,9 @@ public class TelaCandidato extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(27, 27, 27)
-                .addComponent(jButton1)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(jButton2))
                 .addContainerGap(31, Short.MAX_VALUE))
         );
 
@@ -99,7 +111,7 @@ public class TelaCandidato extends javax.swing.JFrame {
 
         jLabel5.setText("Curso");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "CIG", "Informatica", "Estatistica", "Matematica" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "CIG", "Informatica", "Estatistica", "Matematica" }));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -124,7 +136,7 @@ public class TelaCandidato extends javax.swing.JFrame {
                                 .addComponent(jRadioButton2))
                             .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 331, Short.MAX_VALUE)
                             .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addContainerGap(142, Short.MAX_VALUE))
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
@@ -166,19 +178,31 @@ public class TelaCandidato extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 363, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 383, Short.MAX_VALUE)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(115, 115, 115)
                     .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(84, Short.MAX_VALUE)))
+                    .addContainerGap(104, Short.MAX_VALUE)))
         );
 
         getContentPane().add(jPanel1);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+
+//        TelaCandidato tc = new TelaCandidato();
+//        
+//        tc.setVisible(false);
+
+        
+//        new TelaCandidato().setVisible(false);
+        
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -217,6 +241,7 @@ public class TelaCandidato extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
